@@ -12,9 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    @IBOutlet weak var outletImageView: UIImageView!
+    
+    @IBAction func pressedSegmented(_ sender: UISegmentedControl) {
+    
+        if ( sender.selectedSegmentIndex == 0){
+            outletImageView.image = UIImage(named: "0")
+        }
+        else if ( sender.selectedSegmentIndex == 1){
+            outletImageView.image = UIImage(named: "1")
+        }
+        else{
+            outletImageView.image = UIImage(named: "2")
+        }
+    }
 }
-
